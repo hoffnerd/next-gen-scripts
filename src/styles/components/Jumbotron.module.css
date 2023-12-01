@@ -1,0 +1,49 @@
+.animatedText {
+    --_bg-size: var(--bg-size, 200%);
+    --_bg-deg: var(--bg-deg, 90deg);
+    --_primary-color: var(--primary-color, var(--brand-primary));
+    --_secondary-color: var(--secondary-color, var(--brand-secondary));
+
+    font-family: sans-serif;
+    font-size: clamp(3rem, 25vmin, 8rem);
+    background: linear-gradient(
+            90deg,
+            var(--_primary-color),
+            var(--_secondary-color),
+            var(--_primary-color)
+        )
+        0 0 / var(--_bg-size) 100%;
+    color: transparent;
+    background-clip: text;
+}
+
+.animatedText.altered {
+    --bg-size: 400%;
+    --bg-deg: 45deg;
+    --primary-color: var(--brand-secondary);
+    --secondary-color: var(--brand-primary);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .animatedText {
+        animation: move-bg 8s linear infinite;
+    }
+    @keyframes move-bg {
+        to {
+            background-position: var(--_bg-size) 0;
+        }
+    }
+}
+
+.animatedUl,
+.animatedLi {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.animatedUl {
+}
+
+.animatedLi {
+}
