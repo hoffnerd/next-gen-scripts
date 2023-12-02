@@ -1,5 +1,13 @@
+
+// Packages----------------------------------------------
 import { Inter } from 'next/font/google'
+// FontAwesome------------------------------------------------
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config as fwaConfig } from "@fortawesome/fontawesome-svg-core";
+fwaConfig.autoAddCss = false;
+// Styles------------------------------------------------
 import '@/styles/globals.css'
+
 
 const inter = Inter({ subsets: ['latin'] })
 

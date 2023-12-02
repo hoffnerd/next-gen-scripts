@@ -1,9 +1,11 @@
 import Jumbotron from "@/components/Jumbotron";
+import PhraseScrambler from "@/components/PhraseShuffler";
 
-export default function Page() {
-    return (
-        <main className="flex flex-col items-center p-24">
-            <Jumbotron/>
-        </main>
-    )
-}
+
+const Page = () => (
+    <main className="flex flex-col items-center p-24">
+        <Jumbotron/>
+        <PhraseScrambler/>
+    </main>
+)
+export default Page;
