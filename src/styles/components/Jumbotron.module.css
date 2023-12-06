@@ -1,3 +1,46 @@
+.jumbotronText{
+    font-size: 8rem;
+    font-weight: 900;
+    display: flex;
+}
+@media only screen and (max-width: 1087px){
+    .jumbotronText{
+        font-size: 7rem;
+        font-weight: 900;
+    }
+}
+@media only screen and (max-width: 951px){
+    .jumbotronText{
+        font-size: 6rem;
+        font-weight: 800;
+    }
+}
+@media only screen and (max-width: 813px){
+    .jumbotronText{
+        font-size: 5rem;
+        font-weight: 800;
+    }
+}
+@media only screen and (max-width: 681px){
+    .jumbotronText{
+        font-size: 4rem;
+        font-weight: 800;
+    }
+}
+@media only screen and (max-width: 543px){
+    .jumbotronText{
+        display: contents;
+    }
+    .staticText{
+        margin: -40px;
+    }
+    /* .animatedText:after,
+    .animatedText:before{
+        content: ' ';
+        display: block;
+    } */
+}
+
 .animatedText {
     --_bg-size: var(--bg-size, 200%);
     --_bg-deg: var(--bg-deg, 90deg);
@@ -5,7 +48,7 @@
     --_secondary-color: var(--secondary-color, var(--brand-secondary));
 
     font-family: sans-serif;
-    font-size: clamp(3rem, 25vmin, 8rem);
+    /* font-size: clamp(3rem, 25vmin, 8rem); */
     background: linear-gradient(
             90deg,
             var(--_primary-color),

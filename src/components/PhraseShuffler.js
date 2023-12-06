@@ -3,8 +3,11 @@
 // Packages----------------------------------------------
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+// Styles------------------------------------------------
+import styles from "@/styles/components/PhraseShuffler.module.css"
 // Other-------------------------------------------------
 import { isArray } from "@/util";
+
 
 
 
@@ -142,10 +145,10 @@ const PhraseShuffler = () => {
 
     //______________________________________________________________________________________
     // ===== Component Return  =====
-    return <div className="flex text-5xl font-normal py-6">
+    return <div className={styles.phraseShuffler}>
         {isArray(shuffledPhrase) && shuffledPhrase.map(obj => (
             <motion.div key={obj.key} layout transition={{ ease: "linear", stiffness: 100 }}>
-                {obj.display === " " ? <>&nbsp;</> : obj.display}
+                {obj.display === " " ? <>&nbsp;<br/></> : obj.display}
             </motion.div>
         ))}
     </div>

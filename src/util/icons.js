@@ -37,7 +37,7 @@ export const renderIcon = (iconInfo) => {
  */
 export const renderIcons = (iconArray) => {
     let icons = [];
-    iconArray.foreach((iconInfo, index) => {
+    iconArray.forEach((iconInfo, index) => {
         const iconName = isObj(iconInfo, ["key"]) ? iconInfo.key : iconInfo;
         checkIconInLibrary(iconName) && icons.push(
             <FontAwesomeIcon key={iconName} icon={library[iconName]} className={isObj(iconInfo, ["className"]) ? iconInfo.className : ""} style={isObj(iconInfo, ["style"]) ? iconInfo.styles : {}} />
@@ -53,7 +53,7 @@ export const renderIcons = (iconArray) => {
  * @returns array of FontAwesomeIcon components or a single FontAwesomeIcon component.
  */
 export const renderFontAwesomeIcons = (iconConfig=null) => {
-    if(iconConfig) return console.error("renderFontAwesomeIcons,", {iconConfig, stylesConfig});
-    if(isArray(iconConfig)) return renderIcons(iconConfig, stylesConfig);
-    return renderIcon(iconConfig, stylesConfig);
+    if(!iconConfig) return console.error("renderFontAwesomeIcons,", {iconConfig});
+    if(isArray(iconConfig)) return renderIcons(iconConfig);
+    return renderIcon(iconConfig);
 }
