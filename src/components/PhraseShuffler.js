@@ -148,7 +148,7 @@ const PhraseShuffler = () => {
     return <div className={styles.phraseShuffler}>
         {isArray(shuffledPhrase) && shuffledPhrase.map(obj => (
             <motion.div key={obj.key} layout transition={{ ease: "linear", stiffness: 100 }}>
-                {obj.display === " " ? <>&nbsp;<br/></> : obj.display}
+                {obj.display === " " ? <>&nbsp;</> : obj.display}
             </motion.div>
         ))}
     </div>

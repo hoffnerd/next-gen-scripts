@@ -3,84 +3,35 @@
     font-weight: 900;
     display: flex;
 }
-@media only screen and (max-width: 1087px){
+@media only screen and (max-width: 1105px){
     .jumbotronText{
         font-size: 7rem;
         font-weight: 900;
     }
 }
-@media only screen and (max-width: 951px){
+@media only screen and (max-width: 968px){
     .jumbotronText{
         font-size: 6rem;
         font-weight: 800;
     }
 }
-@media only screen and (max-width: 813px){
+@media only screen and (max-width: 830px){
     .jumbotronText{
         font-size: 5rem;
         font-weight: 800;
     }
 }
-@media only screen and (max-width: 681px){
+@media only screen and (max-width: 696px){
     .jumbotronText{
         font-size: 4rem;
         font-weight: 800;
     }
 }
-@media only screen and (max-width: 543px){
+@media only screen and (max-width: 560px){
     .jumbotronText{
         display: contents;
     }
     .staticText{
         margin: -40px;
     }
-    /* .animatedText:after,
-    .animatedText:before{
-        content: ' ';
-        display: block;
-    } */
-}
-
-.animatedText {
-    --_bg-size: var(--bg-size, 200%);
-    --_bg-deg: var(--bg-deg, 90deg);
-    --_primary-color: var(--primary-color, var(--brand-primary));
-    --_secondary-color: var(--secondary-color, var(--brand-secondary));
-
-    font-family: sans-serif;
-    /* font-size: clamp(3rem, 25vmin, 8rem); */
-    background: linear-gradient(
-            90deg,
-            var(--_primary-color),
-            var(--_secondary-color),
-            var(--_primary-color)
-        )
-        0 0 / var(--_bg-size) 100%;
-    color: transparent;
-    background-clip: text;
-}
-
-.animatedText.altered {
-    --bg-size: 400%;
-    --bg-deg: 45deg;
-    --primary-color: var(--brand-secondary);
-    --secondary-color: var(--brand-primary);
-}
-
-@media (prefers-reduced-motion: no-preference) {
-    .animatedText {
-        animation: move-bg 8s linear infinite;
-    }
-    @keyframes move-bg {
-        to {
-            background-position: var(--_bg-size) 0;
-        }
-    }
-}
-
-.animatedUl,
-.animatedLi {
-    list-style: none;
-    padding: 0;
-    margin: 0;
 }
