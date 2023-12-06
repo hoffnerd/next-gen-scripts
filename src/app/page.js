@@ -1,9 +1,13 @@
 import Jumbotron from "@/components/Jumbotron";
+import PhraseScrambler from "@/components/PhraseShuffler";
+import SocialBanner from "@/components/SocialBanner";
 
-export default function Page() {
-    return (
-        <main className="flex flex-col items-center p-24">
-            <Jumbotron/>
-        </main>
-    )
-}
+
+const Page = () => (
+    <main className="flex flex-col items-center p-24">
+        <Jumbotron/>
+        <PhraseScrambler/>
+        <SocialBanner/>
+    </main>
+)
+export default Page;

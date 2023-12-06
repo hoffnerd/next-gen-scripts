@@ -1,17 +1,10 @@
 import styles from "@/styles/components/Jumbotron.module.css"
-import PhraseScrambler from "./PhraseShuffler";
 
-const Jumbotron = () => {
-    // const phrase = "The Shape of Scripts to Come";
-    // const scrambledPhrase = phrase.split('').sort(() => 0.5 - Math.random()).join('');
-
-    return <>
-        <h1 className="text-9xl font-black">
-            <span className={styles.animatedText}>Next</span>
-            <span>Gen</span>
-            <span className={`${styles.animatedText} ${styles.altered}`}>Scripts</span>
-        </h1>
-        <PhraseScrambler />
-    </>
-}
+const Jumbotron = () => (
+    <h1 className={styles.jumbotronText}>
+        <div className={styles.animatedText}>Next</div>
+        <div className={styles.staticText}>Gen</div>
+        <div className={`${styles.animatedText} ${styles.altered}`}>Scripts</div>
+    </h1>
+);
 export default Jumbotron;

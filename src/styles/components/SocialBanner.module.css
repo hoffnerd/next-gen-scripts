@@ -1,0 +1,138 @@
+.bar{
+    width: 100dvw;
+    /* background-color: rgb(0, 0, 40); */
+    font-size: 3.75rem;
+    line-height: 1;
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
+}
+.iconGroup{
+    display: flex;
+    justify-content: space-around;
+    vertical-align: middle;
+}
+
+@media only screen and (max-width: 800px){
+    .bar{
+        font-size: 3rem;
+    }
+}
+@media only screen and (max-width: 700px){
+    .bar{
+        font-size: 2rem;
+    }
+}
+@media only screen and (max-width: 450px){
+    .bar{
+        font-size: 3.75rem;
+        width: unset;
+    }
+    .iconGroup{
+        display: grid;
+    }
+    .middleIcon{
+        display: none;
+    }
+    .bar a.colorfulLink{
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+
+.hiddenIcon{
+    display: none;
+    /* z-index: 5; */
+}
+.middleIcon{
+    color: transparent;
+}
+
+@media only screen and (min-width: 451px){
+    .bar a.colorfulLink{
+        z-index: 5;
+    }
+
+    .bar a:hover svg path,
+    .bar a:focus svg path{
+        fill: white !important;
+    }
+
+    .bar a:hover.colorfulLink,
+    .bar a:focus.colorfulLink{
+        --_background-color: var(--background-color, var(--brand-primary));
+
+        background-color: var(--_background-color);
+        position: absolute;
+        width: 100dvw;
+        margin-top: -1.75rem;
+        padding-top: 1.75rem;
+        padding-bottom: 1.75rem;
+        z-index: 4;
+    }
+
+    .bar a:hover.colorfulLink svg,
+    .bar a:focus.colorfulLink svg{
+    /* .bar a.colorfulLink svg{ */
+        --_top: var(--top, 50%);
+        --_left: var(--left, 50%);
+
+        position: relative;
+        top: var(--_top);
+        left: var(--_left);
+    }
+
+    .bar a:hover.colorfulLink.twitch,
+    .bar a:focus.colorfulLink.twitch{
+        --background-color: #9146FF
+    }
+    .bar a:hover.colorfulLink.youtube,
+    .bar a:focus.colorfulLink.youtube{
+        --background-color: #FF0000
+    }
+    .bar a:hover.colorfulLink.discord,
+    .bar a:focus.colorfulLink.discord{
+        --background-color: #5865F2
+    }
+    .bar a:hover.colorfulLink.twitter,
+    .bar a:focus.colorfulLink.twitter{
+        --background-color: #000000
+    }
+    .bar a:hover.colorfulLink.threads,
+    .bar a:focus.colorfulLink.threads{
+        --background-color: #cd486b
+    }
+    .bar a:hover.colorfulLink.instagram,
+    .bar a:focus.colorfulLink.instagram{
+        --background-color: #fbad50
+    }
+
+
+    /* .bar .hiddenIcon.middleIcon~a:hover.colorfulLink,
+    .bar a:hover.colorfulLink~.hiddenIcon.middleIcon{
+        display: unset;
+    } */
+    .bar a:hover.colorfulLink.twitch+.hiddenIcon.twitch,
+    .bar a:focus.colorfulLink.twitch+.hiddenIcon.twitch{
+        display: unset;
+    }
+    .bar a:hover.colorfulLink.youtube+.hiddenIcon.youtube,
+    .bar a:focus.colorfulLink.youtube+.hiddenIcon.youtube{
+        display: unset;
+    }
+    .bar a:hover.colorfulLink.discord+.hiddenIcon.discord,
+    .bar a:focus.colorfulLink.discord+.hiddenIcon.discord{
+        display: unset;
+    }
+    .bar a:hover.colorfulLink.twitter+.hiddenIcon.twitter,
+    .bar a:focus.colorfulLink.twitter+.hiddenIcon.twitter{
+        display: unset;
+    }
+    .bar a:hover.colorfulLink.threads+.hiddenIcon.threads,
+    .bar a:focus.colorfulLink.threads+.hiddenIcon.threads{
+        display: unset;
+    }
+    .bar a:hover.colorfulLink.instagram+.hiddenIcon.instagram,
+    .bar a:focus.colorfulLink.instagram+.hiddenIcon.instagram{
+        display: unset;
+    }
+}
