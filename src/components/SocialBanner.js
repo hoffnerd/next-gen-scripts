@@ -5,7 +5,7 @@ import { renderFontAwesomeIcons } from "@/util/icons";
 
 //______________________________________________________________________________________
 // ===== Constants  =====
-const defaultLinearGradientOptions = {duration:6, primary:"#7A5FFF", secondary:"#ffffff"};
+const defaultLinearGradientOptions = {duration:10, primary:"#7A5FFF", secondary:"#ffffff"};
 
 
 

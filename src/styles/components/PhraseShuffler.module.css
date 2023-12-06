@@ -5,25 +5,30 @@
     line-height: 1;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+    height: 96px;
 }
 
-@media only screen and (max-width: 681px){
+@media only screen and (max-width: 699px){
     .phraseShuffler{
         font-size: 2rem;
+        height: 80px;
     }
 }
-@media only screen and (max-width: 455px){
+@media only screen and (max-width: 475px){
     .phraseShuffler{
         font-size: 1.5rem;
+        height: 72px;
     }
 }
-@media only screen and (max-width: 341px){
+@media only screen and (max-width: 359px){
     .phraseShuffler{
         font-size: 1.25rem;
+        height: 68px;
     }
 }
-@media only screen and (max-width: 285px){
+@media only screen and (max-width: 301px){
     .phraseShuffler{
         font-size: 1.125rem;
+        height: 66px;
     }
 }

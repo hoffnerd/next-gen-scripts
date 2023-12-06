@@ -1,0 +1,22 @@
+.header{
+    font-size: 2rem;
+}
+
+.cardContainer {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+    .cardContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1400px) {
+    .cardContainer {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
