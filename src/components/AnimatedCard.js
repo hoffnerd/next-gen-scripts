@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import styles from "@/styles/components/animatedCard.module.css";
+import styles from "@/styles/components/AnimatedCard.module.css";
 
 /**
  * Card with an image, display, description, and a link.
